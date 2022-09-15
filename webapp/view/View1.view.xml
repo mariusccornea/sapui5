@@ -1,0 +1,65 @@
+
+<mvc:View controllerName="project1.controller.View1"
+
+    xmlns:mvc="sap.ui.core.mvc" 
+
+    displayBlock="true"
+
+    xmlns="sap.m">
+
+    <Page id="page" title="pagetitle">
+
+        <content >
+
+            <HBox >
+                <Text id="text1" text="0" class="sapUiLargeMarginBegin sapUiLargeMarginEnd" ></Text>
+                <Input id="ipt" placeholder="cevafrumos"></Input>
+                <Button icon="sap-icon://accept" 
+                    id="btn1" 
+                    press="alertCeva" 
+                    text="pushme">
+                </Button>
+            </HBox>
+
+            <VBox>
+                    <Table items="{/batters/batter}" headerText="un Tabel" >
+                        <columns >
+                                <Column >
+                                <Label text="ID"></Label>
+                            </Column>
+                            <Column >
+                                <Label text="ceva"></Label>
+                            </Column>
+                            <Column >
+                               <Label class="sapUiLargeMarginBegin" text="altceva"></Label>
+                            </Column>
+                        </columns>
+                        <items>
+                        <ColumnListItem>
+                            <Text text="{id}"></Text>
+                            <Text text="{type}"></Text>
+                            <Text text="{id}{type}"></Text>
+                        </ColumnListItem>
+                        </items>
+                </Table>
+           </VBox>
+            <FlexBox alignItems="Start" justifyContent="SpaceBetween" >
+                <GenericTile class="sapUiLargeMarginBegin" press="pressedTile" header="unHeader" />
+               <VBox>
+                    <Text text="text1"/>
+                    <Text text="text2" />
+                    <Text text="text3" />
+                    <Text text="text3" />
+                    <Text text="text4" />
+               </VBox> 
+          
+
+                
+            </FlexBox>
+            
+        </content >
+
+    </Page>
+
+</mvc:View>
+
